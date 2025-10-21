@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+   
+
+    body {font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f3f3f3;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .logo-area img {
+      height: 60px;
+      width: auto;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0px;
+    }
+
+    .menu li {
+      position: relative;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: black;
+      font-weight: 600;
+      padding: 8px 10px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .menu a:hover,
+    .menu a.active {
+      color: #f7941d;
+    }
+
+    /* Dropdown Styles */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: white;
+      min-width: 200px;
+      top: 40px;
+      left: 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-top: 3px solid #f7941d;
+      z-index: 100;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px 16px;
+      color: black;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background: #f2f2f2;
+      color: #f7941d;
+    }
+
+    /* Show dropdown when active class applied */
+    .show {
+      display: block;
+    }
+
+    h1 {
+      text-align: center;
+      color: #f7941d;
+      margin-bottom: 40px;
+      font-size: 28px;
+      letter-spacing: 1px;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      justify-items: center;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+      width: 320px;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+      line-height: 1.6;
+    }
+
+    .card-content p {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .card-content span {
+      font-weight: bold;
+      color: #000;
+    }
+
+    .impact {
+      color: #f7941d;
+      font-weight: bold;
+    }
+
+
+
+      .site-footer {
+  background-color: #0a2a43;
+  color: #ffffff;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-container > div {
+  flex: 1 1 200px;
+  margin: 20px;
+}
+
+.footer-about h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ffcc00;
+}
+
+
+.footer-contact p {
+  margin: 5px 0;
+}
+
+.footer-social a {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 20px;
+  font-size: 14px;
+}
+i.fab.fa-facebook {
+    color: white;
+}
+i.fab.fa-youtube {
+    color: white;
+}
+i.fab.fa-linkedin {
+    color: white;
+}
+i.fab.fa-instagram {
+    color: white;
+}
+
+  </style>
+</head>
+<body>
+  <nav>
+    <!-- Left Logo -->
+    <div class="logo-area">
+      <img src="photo.JPEG" alt="RP DREAMS">
+    </div>
+
+    <!-- Right Menu -->
+    <ul class="menu">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="About.html">About Us</a></li>
+      <li><a href="sarvice.html">Services</a></li>
+
+      <!-- Dropdown Menu -->
+      <li class="dropdown">
+        <a id="solutionsBtn">Solutions ▾</a>
+        <div class="dropdown-content" id="solutionsMenu">
+          <a href="residential.html">Residential</a>
+          <a href="industrial.html">Industry/Commercial</a>
+        </div>
+      </li>
+
+      <li><a href="#">Utility Scale Solar</a></li>
+      <li><a href="#">Enquiry</a></li>
+      <li><a href="#">Careers</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    // dropdown open/close on click
+    const btn = document.getElementById("solutionsBtn");
+    const menu = document.getElementById("solutionsMenu");
+
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      menu.classList.toggle("show");
+    });
+
+    // close dropdown if click outside
+    window.addEventListener("click", function (e) {
+      if (!e.target.matches('#solutionsBtn')) {
+        if (menu.classList.contains("show")) {
+          menu.classList.remove("show");
+        }
+      }
+    });
+
+
+  </script>
+
+  <h1>Residential Solar Installations</h1>
+
+  <div class="card-container">
+    <!-- 1 -->
+    <div class="card">
+      <img src="https://www.rpsolar.co.in/wp-content/uploads/2022/05/WhatsApp-Image-2022-05-27-at-8.42.48-PM-1-1030x464.jpeg" alt="Solar Project 1">
+      <div class="card-content">
+        <p><span>Area:</span> Achrol</p>
+        <p><span>KWh Installed:</span> 8 kW</p>
+        <p><span>Yearly Savings:</span> ₹ 90,000 approx</p>
+        <p class="impact"><span>Environmental Impact:</span> +250 trees planted</p>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="card">
+      <img src="https://www.rpsolar.co.in/wp-content/uploads/2022/05/WhatsApp-Image-2022-05-27-at-8.41.27-PM-2-1030x773.jpeg" alt="Solar Project 2">
+      <div class="card-content">
+        <p><span>Area:</span> Kaladera</p>
+        <p><span>KWh Installed:</span> 5 kW</p>
+        <p><span>Yearly Savings:</span> ₹ 65,000 approx</p>
+        <p class="impact"><span>Environmental Impact:</span> +170 trees planted</p>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="card">
+      <img src="https://www.rpsolar.co.in/wp-content/uploads/2022/03/Home-Gopalan.jpg" alt="Solar Project 3">
+      <div class="card-content">
+        <p><span>Area:</span> Alwar</p>
+        <p><span>KWh Installed:</span> 6 kW</p>
+        <p><span>Yearly Savings:</span> ₹ 80,000 approx</p>
+        <p class="impact"><span>Environmental Impact:</span> +250 trees planted</p>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="card">
+      <img src="https://www.rpsolar.co.in/wp-content/uploads/2022/05/WhatsApp-Image-2022-05-05-at-4.18.29-PM-2-300x225.jpeg" alt="Solar Project 4">
+      <div class="card-content">
+        <p><span>Area:</span> Sargoth</p>
+        <p><span>KWh Installed:</span> 10 kW</p>
+        <p><span>Yearly Savings:</span> ₹ 1,20,000 approx</p>
+        <p class="impact"><span>Environmental Impact:</span> +300 trees planted</p>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="card">
+      <img src="https://www.rpsolar.co.in/wp-content/uploads/2022/06/WhatsApp-Image-2022-06-22-at-7.44.21-PM-300x225.jpeg" alt="Solar Project 5">
+      <div class="card-content">
+        <p><span>Area:</span> Chomu</p>
+        <p><span>KWh Installed:</span> 4 kW</p>
+        <p><span>Yearly Savings:</span> ₹ 50,000 approx</p>
+        <p class="impact"><span>Environmental Impact:</span> +120 trees planted</p>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="card">
+      <img src="https://www.rpsolar.co.in/wp-content/uploads/2022/06/WhatsApp-Image-2022-06-22-at-8.05.50-PM-300x225.jpeg" alt="Solar Project 6">
+      <div class="card-content">
+        <p><span>Area:</span> Ringus</p>
+        <p><span>KWh Installed:</span> 7 kW</p>
+        <p><span>Yearly Savings:</span> ₹ 95,000 approx</p>
+        <p class="impact"><span>Environmental Impact:</span> +280 trees planted</p>
+      </div>
+    </div>
+     <div class="card">
+      <img src="https://tiimg.tistatic.com/fp/1/006/335/rooftop-solar-home-system-483.jpg" alt="Solar Project 6">
+      <div class="card-content">
+        <p><span>Area:</span> Neem Ka Thana</p>
+        <p><span>KWh Installed:</span> 7 kW</p>
+        <p><span>Yearly Savings:</span> ₹ 95,000 approx</p>
+        <p class="impact"><span>Environmental Impact:</span> +280 trees planted</p>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h2>SolarX Energy</h2>
+      <p>We provide clean, efficient, and affordable solar energy solutions for homes and businesses. Power your future with the sun!</p>
+    </div>
+
+    
+
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>Email: info@rpdreams@hmail.com</p>
+      <p>Phone: +91-123456789</p>
+      <p>Address: Thana Moad Chomu.jaipur</p>
+    </div>
+
+    <div class="footer-social">
+  <h3>Follow Us</h3>
+  <a href="#"><i class="fab fa-facebook"></i></a>
+  <a href="#"><i class="fab fa-instagram"></i></a>
+  <a href="#"><i class="fab fa-linkedin"></i></a>
+  <a href="#"><i class="fab fa-youtube"></i></a>
+</div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 SolarX Energy. All rights reserved.</p>
+  </div>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply for Commercial Solar Subsidy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f5f7fa; margin: 0; padding: 20px; }
+    .container { max-width: 650px; margin: auto; background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.1); }
+    h2 { color: #e67e22; text-align: center; margin-bottom: 20px; }
+    label { display: block; margin: 12px 0 6px; font-weight: bold; color: #333; }
+    input, select, textarea {
+      width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; outline: none; font-size: 14px;
+    }
+    textarea { resize: vertical; min-height: 100px; }
+    button {
+      margin-top: 20px; width: 100%; padding: 14px; background: #e67e22; color: white; border: none;
+      border-radius: 8px; font-size: 16px; cursor: pointer; transition: 0.3s;
+    }
+    button:hover { background: #d35400; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2><i class="fas fa-building"></i> Commercial Solar Subsidy Application</h2>
+    <form>
+      <label>Business/Company Name</label>
+      <input type="text" required>
+
+      <label>Contact Person</label>
+      <input type="text" required>
+
+      <label>Email</label>
+      <input type="email" required>
+
+      <label>Phone Number</label>
+      <input type="tel" required>
+
+      <label>State</label>
+      <select required>
+        <option value="">Select your state</option>
+        <option>Delhi</option>
+        <option>Punjab</option>
+        <option>Haryana</option>
+        <option>Uttar Pradesh</option>
+        <option>Maharashtra</option>
+      </select>
+
+      <label>Estimated Project Size (kW)</label>
+      <input type="number" min="1" required>
+
+      <label>Message / Notes</label>
+      <textarea placeholder="Project details, preferred vendor etc..."></textarea>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+</body>
+</html>

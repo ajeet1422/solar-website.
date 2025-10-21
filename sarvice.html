@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RP SOLAR - Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+   
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+      overflow-x: hidden;
+    }
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+
+    /* Header */
+    header {
+      background: #fff;
+      padding: 10px 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header h1 {
+      font-size: 24px;
+      color: #f90;
+    }
+    .logo-area {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .logo-area img {
+    height: 50px;
+    padding: 0px 0px;
+    margin: 0px -45px;
+}
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 10px;
+      font-weight: 500;
+          font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #f90;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('00.jpg') no-repeat center center/cover;
+      height: 90vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background-size: cover;
+  background-position: bottom;   /* neeche ka part dikhayega */
+  display: flex;
+  overflow: hidden;
+      align-items: center;
+      color: white;
+      text-shadow: 1px 1px 4px #000;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    /* How we work */
+    .work-section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .work-section h2 {
+      color: #e65100;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      font-size: 22px;
+      letter-spacing: 1px;
+    }
+
+    .work-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .work-box {
+      width: 230px;
+      text-align: center;
+    }
+
+    .work-box img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .work-box h3 {
+      margin: 15px 0 10px;
+      color: #222;
+    }
+
+    .work-box p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+
+
+
+
+font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+
+  .slider {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 90%;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+
+  .slider-track {
+    display: inline-flex;
+    animation: scroll 15s linear infinite; /* 🔹 Speed here (15s = fast) */
+  }
+
+  .slide {
+    position: relative;
+    min-width: 300px; /* 🔹 Smaller width */
+    height: 200px; /* 🔹 Smaller height */
+    margin-right: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+
+{
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 20px;
+}
+h1 { text-align: center; color: #34495e; margin-bottom: 40px; }
+
+{
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 20px;
+}
+    /* RP Groups Section */
+    .groups {
+      background: #fafafa;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .groups h2 {
+      color: #e65100;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+    }
+
+    .group-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 60px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .group-box {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 300px;
+      padding: 25px;
+    }
+
+    .group-box img {
+      height: 80px;
+      margin-bottom: 15px;
+    }
+
+    .group-box h3 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .group-box p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: #f90;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    @media(max-width: 768px) {
+      .work-container, .group-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .hero h2 {
+        font-size: 28px;
+      }
+    }
+    footer{background:#0f172a;
+      color:#94a3b8;
+      margin-top:40px;
+      padding:20px 0;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
+    .footer-info h3{
+      margin:0 0 10px;
+      color:#fff;
+    }
+
+    .footer-info p{
+      margin:5px 0;
+    }
+    .footer-map iframe{
+      width:100%;
+      height:200px;
+      border:0;
+      border-radius:10px
+    }
+    .footer-info p {
+    margin: 5px 0;
+    color: #fff;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+    .footer-bottom{
+      margin-top:20px;
+      border-top:1px solid black;
+      padding-top:10px;
+      text-align:center;
+      font-size:14px
+
+    }
+
+    @media(max-width:768px){.footer-grid{grid-template-columns:1fr}}
+
+
+
+
+
+    .my-social-right {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 9999;
+}
+
+.my-social-right a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: #333;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 8px 0 0 8px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.my-social-right a:hover {
+  transform: translateX(-5px);
+}
+
+/* ब्रांड कलर */
+.my-social-right a.instagram { background: #E1306C; }
+.my-social-right a.youtube   { background: #FF0000; }
+.my-social-right a.facebook  { background: #1877F2; }
+.my-social-right a.twitter   { background: #1DA1F2; }
+.my-social-right a.telegram  { background: #0088cc; }
+.my-social-right a.whatsapp  { background: #25D366; }
+
+/* मोबाइल के लिए छोटा आकार */
+@media (max-width: 600px) {
+  .my-social-right a {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+
+#backToTopBtn {
+  display: none;
+  position: fixed;
+    bottom: 7px;
+    right: 50px;
+  z-index: 99;
+  padding: 12px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #2596be;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 7px 0 0 7px;
+  transition: transform 0.3s, background 0.3s;
+}
+#backToTopBtn:hover {
+  background-color: #e68900;
+}
+  </style>
+</head>
+<body>
+
+  <header>
+     <div class="logo-area">
+      <img src="photo.JPEG" alt="RP DREAMS"> <!-- Apna logo yaha lagao -->
+      
+    </div>
+    <nav>
+      <a href="website.html">Home</a>
+      <a href="About.html">About Us</a>
+      <a href="sarvice,html">Services</a>
+      <a href="#">Solutions</a>
+      <a href="#">Utility Scale Solar</a>
+      <a href="#">Enquiry</a>
+      <a href="careers">Careers</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    
+  </section>
+
+  <section class="work-section">
+    <h2>How we work</h2>
+    <div class="work-container">
+      <div class="work-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/3069/3069170.png" alt="">
+        <h3>Site Survey</h3>
+        <p>Our Team will meet with you to assess the right options for installing a solar power plant at your premises.
+
+We will also provide expert advice on the best solutions for you based on the technicalities of your site and region.</p>
+      </div>
+
+      <div class="work-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/2331/2331981.png" alt="">
+        <h3>Design</h3>
+        <p>Our engineers will design the aptest solar power configuration for your requirement.
+
+We utilise available space to generate maximum energy while keeping the aesthetics in check.</p>
+      </div>
+
+      <div class="work-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/4321/4321866.png" alt="">
+        <h3>Installation & Commissioning</h3>
+        <p>WWe take care of the entire installation of your solar power system with our finest installation team within the stipulated period
+
+we also process  </p>
+      </div>
+
+      <div class="work-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/565/565547.png" alt="">
+        <h3>Operations & Maintenance</h3>
+        <p>WWe also provide post-installation support which ensures that your solar power system is operating efficiently and without issues.</p>
+      </div>
+    </div>
+  </section>
+
+<div class="slider">
+  <div class="slider-track">
+    <div class="slide">
+      <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=900&q=80" alt="">
+      <div class="caption">Residential Solar</div>
+    </div>
+    <div class="slide">
+      <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=900&q=80" alt="">
+      <div class="caption">Commercial Solar</div>
+    </div>
+    <div class="slide">
+      <img src="https://images.pexels.com/photos/8853508/pexels-photo-8853508.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+      <div class="caption">Rooftop Installation</div>
+    </div>
+    <div class="slide">
+      <img src="https://images.pexels.com/photos/9799700/pexels-photo-9799700.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+      <div class="caption">Solar Farm</div>
+    </div>
+    <div class="slide">
+      <img src="https://images.pexels.com/photos/9799710/pexels-photo-9799710.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+      <div class="caption">Off-Grid Solar</div>
+    </div>
+    <div class="slide">
+      <img src="https://images.pexels.com/photos/371917/pexels-photo-371917.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+      <div class="caption">Solar Water Pump</div>
+    </div>
+    <!-- Repeat for smooth loop -->
+    <div class="slide">
+      <img src="https://images.pexels.com/photos/8853526/pexels-photo-8853526.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+      <div class="caption">Residential Solar</div>
+    </div>
+    <div class="slide">
+      <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=900&q=80" alt="">
+      <div class="caption">Commercial Solar</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+  <section class="groups">
+    <h2>RP Groups of Companies</h2>
+    <div class="group-container">
+      <div class="group-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/1041/1041882.png" alt="">
+        <h3>RP Infra Services</h3>
+        <p>Provides expertise and trained manpower for construction and solar projects. Reliable and professional team.</p>
+      </div>
+
+      <div class="group-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/2331/2331957.png" alt="">
+        <h3>RP Structural Solutions LLP</h3>
+        <p>Designs, builds, and operates prefabricated structures and turnkey solar projects from 1 MW to 50 MW.</p>
+      </div>
+    </div>
+  </section>
+
+ <footer>
+    <div class="containera">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <h3>RP Dreams Infratech</h3>
+          <p>Address: Thana Mod Chomu,Jaipur</p>
+          <p><a href="https://accounts.google.com/v3/signin/confirmidentifier?authuser=0&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&ifkv=AdBytiPoBGesa9Pf44z-9hQrKgE_Mz2quPcvQMZXLTbvSdi_q0teYR0aTS5VtOqXHF2pXVH7zl5b&osid=1&passive=1 09600&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1139585611%3A1754911197260645">Email: info@rpdreams@hmail.com</a>  </p>
+          <p>
+                <a href="#">Phone: +91 8306535195</a>  </p>
+        </div>
+        <div class="footer-map">
+          <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019911831266!2d144.95373531531612!3d-37.81720997975115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df1f7c8b9%3A0x5045675218ce6e0!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sin!4v1625255555555" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © <span id="year"></span> RP Dreams Infratech. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+   <div class="my-social-right">
+  <a href="https://instagram.com/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+  <a href="https://youtube.com/" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+  <a href="https://facebook.com/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://twitter.com/" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+  
+  <a href="https://wa.me/8306535195" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+
+
+
+<button onclick="topFunction()" id="backToTopBtn" title="Go to top">⬆</button>
+
+<script>
+let mybutton = document.getElementById("backToTopBtn");
+window.onscroll = function() {
+  mybutton.style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? "block" : "none";
+};
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+</body>
+</html>
